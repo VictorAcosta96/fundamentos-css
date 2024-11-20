@@ -1,0 +1,129 @@
+/* SELECTORES */
+
+/* 
+    Selectores Simples
+        Selectores elementales
+            Selector Universal -> *
+            Selector de tipo o etiqueta -> Nombre de la etiqueta
+        Selectores de atributo
+            id -> id del elemento
+            clase -> clase del elemento
+            otros atributos
+                [atributo]->Selecciona los elementos con ese atributo
+                [atributo=valor]->Selecciona los elementos que coincidan con el atributo=valor
+                [atributo^=valor]-> Selecciona los elementos cuyo atributo comience con valor
+                [atributo*=valor]-> Selecciona los elementos cuyo atributo contenga valor
+                [atributo$=valor]-> Selecciona los elementos cuyo atributo termine con valor
+                [atributo|=valor]-> Selecciona los elementos cuyo atributo comience con valor o valor-
+                
+    Selectores Compuestos
+        Selectores Agrupados -> Se agrupan los selectores separados por comas y se escribe el estilo una sola vez 
+        Selectores Combinadores
+            Selector descendente -> Selecciona un elemento dentro de otro
+            Selector de hermano siguiente + -> Selecciona al hermano siguiente adyacente 
+            Selector de hermanos siguientes ~ -> Selecciona  a todos los hermanos siguientes
+            Selector de hijo directo > -> Selecciona SOLO los hijos directos
+
+            Nota: si el elemento esta dentro de otro es hijo, si estan al mismo nivel son hermanos
+*/
+
+/*  Selector Universal -> *   ->selecciona todo el documento */
+/* * {
+  background-color: lightcoral;
+} */
+
+/*  Selector de tipo o etiqueta -> Nombre de la etiqueta */
+/* h1 {
+  background-color: lightcyan;
+}
+
+p {
+  background-color: lightgreen;
+}
+
+ul {
+  background-color: red;
+}
+
+li {
+  background-color: blue;
+} */
+
+/* 
+Selectores de atributo
+
+tano el id como la clase son case-sencitive
+*/
+
+/*  id -> id del elemento */
+/* #title {
+  background-color: rgb(172, 68, 68);
+} */
+
+/* clase -> clase del elemento */
+/* .title {
+  background-color: blueviolet;
+} */
+
+/* .text {
+  background-color: limegreen;
+} */
+
+/* [atributo]->Selecciona los elementos con ese atributo */
+/* [href] {
+  background-color: darkcyan;
+} */
+
+/* [atributo=valor]->Selecciona los elementos que coincidan con el atributo=valor */
+/* [href="https://google.com"]
+{
+  background-color: lightcoral;
+} */
+
+/* [atributo^=valor]-> Selecciona los elementos cuyo atributo comience con valor */
+/* [href^='color'] {
+  background-color: red;
+} */
+
+/*[atributo*=valor]-> Selecciona los elementos cuyo atributo contenga valor*/
+/* [href*='modo'] {
+  background-color: green;
+} */
+
+/*  [atributo$=valor]-> Selecciona los elementos cuyo atributo termine con valor */
+/* [href$='azul'] {
+  background-color: steelblue;
+} */
+
+/* ******************  Selectores Combinadores ************ */
+
+/*  Selectores Agrupados -> Se agrupan los selectores separados por comas y se escribe el estilo una sola vez  */
+
+/* .text-1,
+.text-2,
+.text-3,
+.text-4 {
+  background-color: blueviolet;
+} */
+
+/*  Selector descendente -> Selecciona un elemento dentro de otro */
+
+div .title-2 {
+  background-color: turquoise;
+}
+
+/*  Selector de hermano siguiente + -> Selecciona al hermano siguiente adyacente */
+
+.text-2 + .title-2 {
+  background-color: tomato;
+}
+
+/* Selector de hermanos siguientes ~ -> Selecciona  a todos los hermanos siguientes */
+.text-2 ~ .text {
+  background-color: skyblue;
+}
+
+/*  Selector de hijo directo > -> Selecciona SOLO los hijos directos */
+.container > .text {
+  background-color: blueviolet;
+}
